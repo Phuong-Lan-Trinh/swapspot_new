@@ -86,7 +86,7 @@ if(ENVIRONMENT == 'development'){
 		'hostname' => 'localhost',
 		'username' => 'root',
 		'password' => '',
-		'database' => 'commonprogramming',
+		'database' => 'swapspot',
 		'dbdriver' => 'mysqli',
 		'dbprefix' => '',
 		'pconnect' => TRUE,
