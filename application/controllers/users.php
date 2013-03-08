@@ -30,6 +30,10 @@ class Users extends CI_Controller{
 
 	//main method that gets loaded by default
 	public function index(){
+
+		$some_dynamic_variable=array('adsfad','adsfadsf' );
+
+		FB::log($some_dynamic_variable);
 	
 		if($this->ion_auth->logged_in()){
 			redirect('home');

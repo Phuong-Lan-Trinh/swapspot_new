@@ -1,7 +1,9 @@
+	<html>
 		<footer>
-			<div class="container">
-				<p><?= $footer_message ?></p>
-			</div>
-		</footer>
-	</body>
-</html>
+            <div class="container">
+                <div class="row">
+                    
+                </div>
+            </div>
+        </footer>
+	

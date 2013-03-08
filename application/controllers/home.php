@@ -4,121 +4,59 @@ use Guzzle\Url\Mapper;
 
 class Home extends CI_Controller {
 
+	private $view_data = array();
+
+	public function __construct(){
+	
+		parent::__construct();
+		$this->load->library('session');
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_error_delimiters(
+			'<p>',
+			'</p>'
+		);
+	}
+
 	public function index(){
         
-        $view_data = array(
-			'header' => array(
-				'header_message' => 'THIS IS A HEADER MESSAGE',
-			),
-			'footer' => array(
-				'footer_message' => 'THIS IS A FOOTER MESSAGE',
-			),
-			'message' => 'THIS IS A STANDARD MESSAGE for the INDEX VIEW',
-		);
+        $variable='Look I am a variable';
+        FB::log($variable);
+
+        if($this->ion_auth->logged_in()){
+        	redirect('home');
+        }
 		
-		Template::compose('index', $view_data);
+		$this->view_data += array(
+			'header' => array(
+				'header_message' => 'hello'
+			),
+
+			'footer' => array(
+				'footer_message' => 'bye bye'
+			),
+			'form_destination' =>$this->router->fetch_class() .'/validation'
+			);
+		Template::compose('index', $this->view_data);
         
     }
-	
-	public function json(){
-	
-		$view_data = array(
-			0	=> array(
-				'line'		=> false,
-				'message'	=> 'No response was passed to the json view file',
-			),
-		);
-		
-		Template::compose(false, $view_data, 'json');
-	
-	}
-	
-	public function table(){
-	
-		$view_data = array(
-			'header' => array(
-				'header_message' => 'THIS IS A HEADER MESSAGE',
-			),
-			'footer' => array(
-				'footer_message' => 'THIS IS A FOOTER MESSAGE',
-			),
-			'row_data' => array(
-				array(
-					'name' => 'fgfdh',
-					'id' => 'More rows to loop!'
-				),
-				array(
-					'name' => 'fgfdh',
-					'id' => 'Yay another loop!'
-				),
-			),
-		);
-		
-		Template::compose('table', $view_data);
-	
-	}
-	
-	public function test_interface(){
-	
-		$armor = new Armor();
-		$armor->weight();
-	
-	}
-	
-	public function test_namespace(){
-	
-		$mapper = new Mapper();
-		
-	}
-	
-	public function test_ioc(){
-	
-		$ioc = $this->config->item('ioc');
-		
-		$masterlibrary = $ioc['MasterLibrary'];
-		
-		$masterlibrary->do_something();
-		
-	}
-	
-	public function test_shell(){
-		
-		$descriptor_spec = array(
-		1 => array('pipe', 'w'), //STDOUT write mode
-		2 => array('pipe', 'w'), //STDERR write mode
-		);
 
-		$cmd = 'tracert -w 10 accettura.com';
+    public function validation(){
 
-		$process = proc_open($cmd, $descriptor_spec, $pipes);
+    	$this->form_validation->set_rules('email','email','trim|required');
+    	$this->form_validation->set_rules('password','password','trim|required');
 
-		if(is_resource($process)){
+    	if($this->form_validation->run() == true){
+    		echo '<h2>Welcome to SWAPSOT!</h2>';
+    	
+    	}else{
 
-		while(!feof($pipes[1])){
-			$output = fgets($pipes[1]);
-			echo $output;
-			ob_flush();
-			flush();
-		}
+    	}
+    }
 
-		while (($output = fgets($pipes[1], 4096)) !== false) {
-			echo $output;
-			ob_flush();
-			flush();
-		}
 
-		fclose($pipes[1]);
-
-		$errors = stream_get_contents($pipes[2]);
-		fclose($pipes[2]);
-
-		$exit_code = proc_close($process);
-
-		}
 	
-	}
 	
-	public function test_async_shell(){
 	
 		// function execInBackground($cmd) {
 			// if (substr(php_uname(), 0, 7) == "Windows"){
@@ -137,9 +75,9 @@ class Home extends CI_Controller {
 		//var_dump(stream_get_contents($lol));
 		//pclose($lol);
 	
-	}
-	
 }
+	
+
 
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */
