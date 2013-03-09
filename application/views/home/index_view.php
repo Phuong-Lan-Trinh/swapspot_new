@@ -1,4 +1,3 @@
-<html>
 <div class="main">
         <div class="span8 offset2">
         <h2 style="text-align:center">Find your parking partner!</h2>
