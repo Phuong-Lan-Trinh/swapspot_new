@@ -6,17 +6,16 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Generic Skeleton</title>
+        <title>SWAPSPOT</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         
         <link rel="shortcut icon" href="favicon.ico">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-		
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -54,39 +53,35 @@
             </div>
         </header>
         
-        <div class="main, container">
+        <div class="main">
             <div class="span8 offset2">
             <h2 style="text-align:center">Find your parking partner!</h2>
             <h2 style="text-align:center">SWAP your SPOT</h2>
             </div>
-            <div class="container pull-right, span5">                    
-                    <table class="table table-striped table-hover" >
-					<tr>
-					<th>Best result</th>
-					<th></th>
-					</tr>
-					
-					<tr>
-					<td>Canberra city walk</td>
-					<td><btn name="button" value="true" class="btn btn-primary pull-right" type="button">Reserve</btn></td>
-					</tr>
-					
-					<tr>
-					<td>Canberra city walk</td>
-					<td><btn name="button" value="true" class="btn btn-primary pull-right" type="button">Reserve</btn></td>
-					</tr>
-					
-					<tr>
-					<td>Canberra city walk</td>
-					<td><btn name="button" value="true" class="btn btn-primary pull-right" type="button">Reserve</btn></td>
-					</tr>
-					
-					<tr>
-					<td>Canberra city walk</td>
-					<td><btn name="button" value="true" class="btn btn-primary pull-right" type="button">Reserve</btn></td>
-					</tr>
-                
-					</table>
+            <div class="span6 offset3">
+                <form accept-charset="utf-8" method="post" action="#">
+                    <div class="control-group">  
+                        <label class="for_location"> 
+                            <h5>I am parking at<h5>
+                        </label>
+                            <input class="Location span6" type="text" placeholder="Car park location">
+                    </div>
+                    
+                    
+                    <div class="controls controls-row">
+                        <div class="span3" style="margin-left:0px">
+                            <label class="for_Time">I want to swap at</label>
+                            <input class="Time span3" type="time" placeholder="Time start">
+                        </div>
+                    
+                        <div class="span3 inline">
+                            <label class="for_Timelength">for</label>
+                            <input class="Timelength span3" type="number" placeholder="Time length">
+                        </div>
+                    </div>
+                    <btn class="btn btn-primary pull-right">Search to SWAP</btn>
+                </form>
+                </div>
             </div>
         </div>
         

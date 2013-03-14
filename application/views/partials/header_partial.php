@@ -7,7 +7,7 @@
 	<head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        <title>SWAPSPOT</title>
+        <title><?= $site_title ?></title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width"/>
         
@@ -37,15 +37,18 @@
                             <li><a href="#">About</a></li>
                             <li><a href="#">Contact</a></li>
 						</ul>
-                        <form class="navbar-form pull-right">
-                            <input name="email" class="span2" type="text" placeholder="Email">
-                            <input name="password" class="span2" type="password" placeholder="Password">
-                            <label class="checkbox inline" for="form_remember">
-                                <input id="for_remember" type="checkbox" checked="checked">
-                                 <small><small>Remember</small></small>&nbsp;
-                            </label>
-                            <button class="btn pull-right" type="submit" style="inline">Sign in</button>
-    	               </form>
+                        <div>
+                            <?= form_open($form_destination, array('class' => 'navbar-form pull-right')) ?>
+                                <?= ($login_messages) ? $login_messages : false?>
+                                <input name="email" class="span2" type="text" placeholder="Email">
+                                <input name="password" class="span2" type="password" placeholder="Password">
+                                <label class="checkbox inline" for="form_remember">
+                                    <input id="for_remember" type="checkbox" checked="checked">
+                                     <small><small>Remember</small></small>&nbsp;
+                                </label>
+                                <button name="submit" class="btn pull-right" type="submit" style="inline">Sign in</button>
+        	               </form>
+                        </div>
 					</div>
 				</div>                
             </div>
