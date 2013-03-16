@@ -6,10 +6,7 @@ class Migration_Add_schedules_table extends CI_Migration {
 		$this->dbforge->add_field('id');
 
 		$this->dbforge->add_field(array(
-			'user_id'		=> array(
-								'type'=>'INT',
-								'constraint'=> '255'
-								),
+			
 			'location' 		=> array(
 								'type'=> 'VARCHAR',
 								'constraint'=>'100'

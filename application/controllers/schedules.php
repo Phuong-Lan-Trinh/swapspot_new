@@ -16,7 +16,10 @@ class Schedules extends CI_Controller{
 
 		if($this->form_validation->run() == true){
 			//successful validation
+			$user_id = $this->ion_auth->get_user_id();
+			$this->schedules_model->create($user_id,$location,$timestart,$timelength);
 			redirect('swapspot');
+
 		}else{
 			//failure validation
 			$errors = trim(validation_errors());

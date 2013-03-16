@@ -4,7 +4,7 @@
         <h2 style="text-align:center">SWAP your SPOT</h2>
         </div>
         <div class="span6 offset3">
-            <? if(){ ?>
+            <? if(!''){ ?>
 
             <?= form_open($submit_destination, array('accept-charset' => 'utf-8', 'method' => 'post', 'action' => '#')) ?>
                 <?= ($submit_message) ? $submit_message : false ?>
