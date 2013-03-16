@@ -1,0 +1,15 @@
+public function SWAPSPOT_submit(){
+		$location= $this->input->post('location');
+		$timestart= $this->input->post('timestart');
+		$timelength= $this->input->post('timelength');
+
+		$this->form_validation->set_rules('location','location','trim|required|min_length[5]|max_length[200]|xss_clean');
+		$this->form_validation->set_rules('timestart','timestart','trim|required|min_length[0]|max_length[9]|xss_clean');
+		$this->form_validation->set_rules('timelength','timelength','trim|required|min_length[5]|max_length[200]|xss_clean');
+	 
+		if($this->form_validation->run() == true){
+			redirect('swapspot'); //need to create swapspot file//
+		}else{
+			$this->session->set_flashdata('messange', $this->ion_auth->errors());
+			}
+	}

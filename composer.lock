@@ -1,6 +1,114 @@
 {
-    "hash": "627bae1bb6087260565c69cd0b9aba14",
+    "hash": "c0a4ba7f5811563834d4d92459d4d935",
     "packages": [
+        {
+            "name": "Respect/Validation",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Respect/Validation.git",
+                "reference": "06224c04369eec63777da2ce9acf4afee6b92a5d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Respect/Validation/zipball/06224c04369eec63777da2ce9acf4afee6b92a5d",
+                "reference": "06224c04369eec63777da2ce9acf4afee6b92a5d",
+                "shasum": ""
+            },
+            "require-dev": {
+                "symfony/validator": "2.*",
+                "zendframework/zend-validator": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Respect\\Validation": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD Style"
+            ],
+            "authors": [
+                {
+                    "name": "Henrique Moody",
+                    "email": "henriquemoody@gmail.com",
+                    "homepage": "http://henriquemoody.com/"
+                },
+                {
+                    "name": "Alexandre Gaigalas",
+                    "email": "alexandre@gaigalas.net"
+                },
+                {
+                    "name": "Carlos André Ferrari",
+                    "email": "caferrari@gmail.com"
+                },
+                {
+                    "name": "Devin Torres",
+                    "email": "devin@devintorres.com"
+                },
+                {
+                    "name": "Emerson Carvalho",
+                    "email": "emerson.broga@gmail.com"
+                },
+                {
+                    "name": "Fábio da Silva Ribeiro",
+                    "email": "fabiorphp@gmail.com"
+                },
+                {
+                    "name": "Jair Henrique",
+                    "email": "jair.henrique@gmail.com"
+                },
+                {
+                    "name": "Jayson Reis",
+                    "email": "santosdosreis@gmail.com"
+                },
+                {
+                    "name": "Jean Pimentel",
+                    "email": "jeanfap@gmail.com"
+                },
+                {
+                    "name": "Kleber Hamada Sato",
+                    "email": "kleberhs007@yahoo.com"
+                },
+                {
+                    "name": "Leandro",
+                    "email": "lleitep3@gmail.com"
+                },
+                {
+                    "name": "Marcelo Araujo",
+                    "email": "msaraujo@php.net"
+                },
+                {
+                    "name": "Michael Klishin",
+                    "email": "michaelklishin@me.com"
+                },
+                {
+                    "name": "Morf",
+                    "email": "i@morfi.ru"
+                },
+                {
+                    "name": "Rogerio Prado de Jesus",
+                    "email": "rogeriopradoj@gmail.com"
+                },
+                {
+                    "name": "Torben Brodt",
+                    "email": "t.brodt@gmail.com"
+                },
+                {
+                    "name": "Kinn Coelho Julião",
+                    "email": "kinncj@gmail.com",
+                    "homepage": "http://kinncj.com.br",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Augusto Pascutti",
+                    "email": "augusto@phpsp.org.br"
+                }
+            ],
+            "description": "The most awesome validation engine ever created for PHP",
+            "time": "2013-02-26 00:46:46"
+        },
         {
             "name": "alexandresalome/php-selenium",
             "version": "1.0.1",
@@ -2065,7 +2173,8 @@
     "stability-flags": {
         "behat/behat": 0,
         "behat/mink": 0,
-        "firephp/firephp-core": 20
+        "firephp/firephp-core": 20,
+        "respect/validation": 20
     },
     "platform": [
 

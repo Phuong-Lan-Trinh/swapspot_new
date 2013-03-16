@@ -4,7 +4,10 @@
         <h2 style="text-align:center">SWAP your SPOT</h2>
         </div>
         <div class="span6 offset3">
-            <form accept-charset="utf-8" method="post" action="#">
+            <? if(){ ?>
+
+            <?= form_open($submit_destination, array('accept-charset' => 'utf-8', 'method' => 'post', 'action' => '#')) ?>
+                <?= ($submit_message) ? $submit_message : false ?>
                 <div class="control-group">  
                     <label class="for_location"> 
                         <p>I am parking at</p>
@@ -24,8 +27,12 @@
                         <input name='timelength' class="Timelength span3" type="number" placeholder="Time length">
                     </div>
                 </div>
-                <btn name="button" value="true" class="btn btn-primary pull-right" type="button">Search to SWAP</btn>
+                <btn name="button" value="true" class="btn btn-primary pull-right" type="button" action="">Search to SWAP</btn>
             </form>
+            <? }else{ ?>
+                <?  ?> 
+                <p>you failed</p>
+             <? } ?>
         </div>
     </div>
 </div>

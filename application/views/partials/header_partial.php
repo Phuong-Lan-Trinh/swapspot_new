@@ -38,16 +38,26 @@
                             <li><a href="#">Contact</a></li>
 						</ul>
                         <div>
-                            <?= form_open($form_destination, array('class' => 'navbar-form pull-right')) ?>
-                                <?= ($login_messages) ? $login_messages : false?>
-                                <input name="email" class="span2" type="text" placeholder="Email">
-                                <input name="password" class="span2" type="password" placeholder="Password">
-                                <label class="checkbox inline" for="form_remember">
-                                    <input id="for_remember" type="checkbox" checked="checked">
-                                     <small><small>Remember</small></small>&nbsp;
-                                </label>
-                                <button name="submit" class="btn pull-right" type="submit" style="inline">Sign in</button>
-        	               </form>
+
+                            <? if(!$logged_in){ ?>
+
+                                <?= form_open($form_destination, array('class' => 'navbar-form pull-right')) ?>
+                                    <?= ($login_message) ? $login_message : false?>
+                                    <input name="email" class="span2" type="text" placeholder="Email">
+                                    <input name="password" class="span2" type="password" placeholder="Password">
+                                    <label class="checkbox inline" for="form_remember">
+                                        <input id="for_remember" type="checkbox" checked="checked">
+                                         <small><small>Remember</small></small>&nbsp;
+                                    </label>
+                                    <button name="submit" class="btn pull-right" type="submit" style="inline">Sign in</button>
+                               </form>
+
+                            <? }else{ ?>
+
+                                <p>AWESOME! YOU ARE LOGGED IN!!!</p>
+
+                            <? } ?>
+
                         </div>
 					</div>
 				</div>                

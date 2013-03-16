@@ -65,7 +65,10 @@
 */
 
 Pigeon::map(function($r){
-	$r->resources('posts');
+	
+	$r->post('sessions', 'sessions/create');
+	$r->post('schedules','schedules/create');
+
 });
 
 $route = Pigeon::draw();

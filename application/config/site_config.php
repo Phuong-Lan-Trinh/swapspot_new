@@ -3,14 +3,13 @@
 
 
 $config['view_data'] = array(
-							'header' => array(
-																	
-										
-									),
-							'footer' => array(
-							'footer_message' => '',
-									),
-							);
+	'header' => array(
+		'site_title' => 'SwapSpot',
+	),
+	'footer' => array(
+
+	),
+);
 
 $config['validation_rules'] = array(
 

@@ -3,20 +3,27 @@
 class Migration_Add_schedules_table extends CI_Migration {
 	
 	public function up(){
+		$this->dbforge->add_field('id');
 
-		$field = array(
-						'location' 		=> array(
-											'type'=> 'VARCHAR',
-											'constraint'=>'100'),
-						'time start'	=> array(
-											'type'=> 'TIME',
-											'constraint'=>'6'),
-						'time length'	=> array(
-											'type'=> 'INT',
-											'constraint'=>'5'),
-			);
+		$this->dbforge->add_field(array(
+			'user_id'		=> array(
+								'type'=>'INT',
+								'constraint'=> '255'
+								),
+			'location' 		=> array(
+								'type'=> 'VARCHAR',
+								'constraint'=>'100'
+								),
+			'timestart'	=> array(
+								'type'=> 'TIME',
+								),
+			'timelength'	=> array(
+								'type'=> 'INT',
+								'constraint'=>'5'
+								),
+		));
 
-		$this->dbforge->add_field($field);
+
 		$this->dbforge->create_table('schedules');
 	}
 
