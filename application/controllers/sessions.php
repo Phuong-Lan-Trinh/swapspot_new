@@ -1,6 +1,6 @@
 <?php
 class Sessions extends CI_Controller{
-	
+
 
 	public function __construct(){
 		parent::__construct();
@@ -8,7 +8,7 @@ class Sessions extends CI_Controller{
 		$this->load->library('form_validation');
 	}
 
-	//Use POST HTTP method 
+	//Use POST HTTP method
 	public function create(){
 		$email = $this->input->post('email');
 		$password= $this->input->post('password');
@@ -21,17 +21,17 @@ class Sessions extends CI_Controller{
 				//login success
 				redirect('home');
 			}else{
-				//login failure	
+				//login failure
 				$this->session->set_flashdata('message', $this->ion_auth->errors());
 				redirect('home');
 			}
 
 		}else{	
-				//validation failure
-				$errors = trim(validation_errors());
-				$this->session->set_flashdata('message', $errors);
-				redirect('home');
-			}		
+			//validation failure
+			$errors = trim(validation_errors());
+			$this->session->set_flashdata('message', $errors);
+			redirect('home');
+		}	
 	}
 
 	//Use DELETE HTTP method

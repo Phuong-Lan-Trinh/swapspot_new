@@ -65,16 +65,21 @@
 */
 
 Pigeon::map(function($r){
-	
-	$r->post('sessions', 'sessions/create');
-	$r->post('schedules','schedules/create');
-
+	 $r->route('api',false,function($r){//you can nest routes
+				
+	});
+		
+		$r->get('migrate', 'migrate/index');
+		$r->post('sessions', 'sessions/create');
+		$r->post('schedules', 'schedules/create');
+		$r->get('swapspot','swapspot/index');
+		$r->route('(.*)', 'home#index');
 });
+		
+	$route = Pigeon::draw();
 
-$route = Pigeon::draw();
-
-$route['default_controller'] = 'home';
-$route['404_override'] = '';
+	$route['default_controller'] = 'home';
+	$route['404_override'] = '';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

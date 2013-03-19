@@ -1,9 +1,13 @@
 <?php
+// this controller is to create a form validation for the submit form in the body of the home pate
+
 class Schedules extends CI_Controller{
 	public function __construct(){
+		parent::__construct();
 		$this->load->library('form_validation');
 		$this->load->library('session');
 	}
+	//this function is to validate the information in the body of the home page
 
 	public function create(){
 		$location = $this->input->post('location');
@@ -17,28 +21,27 @@ class Schedules extends CI_Controller{
 		if($this->form_validation->run() == true){
 			//successful validation
 			$user_id = $this->ion_auth->get_user_id();
-			$this->schedules_model->create($user_id,$location,$timestart,$timelength);
-			redirect('swapspot');
+			redirect('swapspot');		
 
 		}else{
 			//failure validation
 			$errors = trim(validation_errors());
-			$this->form_validation->set_flashdata('message', $errors);
+			$this->session->set_flashdata('submit_message', $errors);
 			redirect('home');
+			
+		};
+
+	}
+
+	public function show($id){
+
 		}
 
+	public function update($id){
 
 	}
 
-	public function update(){
-
-	}
-
-	public function read(){
-
-	}
-
-	public function delete(){
+	public function delete($id){
 
 	}
 }

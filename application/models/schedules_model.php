@@ -1,7 +1,7 @@
 <?php
-class Schedules extends CI_Model{
+class Schedules_model extends CI_Model{
 	public function __construct(){
-		parent::__construct()
+		parent::__construct();
 	}
 
 	public function create(){
@@ -12,8 +12,7 @@ class Schedules extends CI_Model{
 			'timelength' => $timelength
 			);
 		$this->db->insert('schedules',$data);
-	}
-					
+						
 	return $this->db->insert('schedules', $data);	
 	}
 

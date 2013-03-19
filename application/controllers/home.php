@@ -20,10 +20,12 @@ class Home extends CI_Controller {
 		$this->view_data['header']['logged_in'] = $this->ion_auth->logged_in();
 		$this->view_data['header']['form_destination'] = 'sessions';
 
-		$this->view_data['submit_message'] = ($this->session->set_flashdata('message'));
-		$this->view_data['submit_destination'] = 'schedules';
-
+		$this->view_data['submit_message'] = ($this->session->flashdata('submit_message')) ? $this->session->flashdata('submit_message'): false;
+		
+		$this->view_data['submit_destination'] = 'schedules';// need to see routing problem? do you have a desni
+		
 		Template::compose('index', $this->view_data); 
+
 
 		
 

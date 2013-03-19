@@ -15,7 +15,7 @@
 		"polycademy/citemplating": "*",
 		"jamierumbelow/pigeon": "*",
 		"firephp/firephp-core":"dev-master",
-		"Respect/Validation": "dev-develop"
+		"polycademy/validation": "*"
     },
     "config": {
         "bin-dir": "bin/"

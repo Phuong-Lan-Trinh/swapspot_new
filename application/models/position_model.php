@@ -1,8 +1,14 @@
 <?php
 class Position extends CI_Model{
-	public function create(
-		)
+	public function create(){
 
-	public funciton read(
-		)
+	}
+
+	public function read(){
+
+	}
+
+	public function delete(){
+		
+	}
 }

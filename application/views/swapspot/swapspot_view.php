@@ -12,22 +12,22 @@
 					
 					<tr>
 					<td>Canberra city walk</td>
-					<td><btn name="button" value="true" class="btn btn-primary pull-right" type="button">Reserve</btn></td>
+					<td><button name="button" class="btn btn-primary pull-right" type="submit">Reserve</button></td>
 					</tr>
 					
 					<tr>
 					<td>Canberra city walk</td>
-					<td><btn name="button" value="true" class="btn btn-primary pull-right" type="button">Reserve</btn></td>
+					<td><button name="button" class="btn btn-primary pull-right" type="submit">Reserve</button></td>
 					</tr>
 					
 					<tr>
 					<td>Canberra city walk</td>
-					<td><btn name="button" value="true" class="btn btn-primary pull-right" type="button">Reserve</btn></td>
+					<td><button name="button" class="btn btn-primary pull-right" type="submit">Reserve</button></td>
 					</tr>
 					
 					<tr>
 					<td>Canberra city walk</td>
-					<td><btn name="button" value="true" class="btn btn-primary pull-right" type="button">Reserve</btn></td>
+					<td><button name="button" class="btn btn-primary pull-right" type="submit">Reserve</button></td>
 					</tr>
                 
 					</table>
